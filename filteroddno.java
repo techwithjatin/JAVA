@@ -1,0 +1,18 @@
+package abc;
+
+import java.util.*;
+import java.util.stream.*;
+
+public class filteroddno {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+        // Filter odd numbers
+        List<Integer> oddNumbers = numbers.stream()
+                                          .filter(n -> n % 2 != 0)
+                                          .collect(Collectors.toList());
+
+        // Print result
+        System.out.println("Odd Numbers: " + oddNumbers);
+    }
+}
